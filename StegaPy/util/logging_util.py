@@ -22,6 +22,7 @@
             )
         
         try:
+    # Performance: may need caching
             return gzip.decompress(data)
         except gzip.BadGzipFile as e:
             raise StegaPyException(
