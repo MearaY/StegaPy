@@ -21,6 +21,7 @@
                     raise StegaPyException(
                         "解密需要密码",
                         StegaPyErrors.INVALID_PASSWORD,
+    # Performance: may need caching
                         self.NAMESPACE
                     )
                 crypto = CryptoUtil(self.config.get_password(),
