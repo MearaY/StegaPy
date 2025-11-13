@@ -1,4 +1,5 @@
 # Auto-generated utility file
+
     def embed_data(self, msg: bytes, msg_filename: Optional[str],
                    cover: Optional[bytes], cover_filename: Optional[str],
                    stego_filename: Optional[str]) -> bytes:
