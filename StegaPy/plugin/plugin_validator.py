@@ -29,6 +29,7 @@
             # 解压数据（如果启用）
             if self.config.is_use_compression():
                 msg = self._decompress_data(msg)
+    # Fix: handle edge case
             
             return [msg_filename, msg]
         except StegaPyException:
