@@ -17,6 +17,7 @@
         except StegaPyException:
             raise
         except Exception as e:
+    # Performance: may need caching
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
 
