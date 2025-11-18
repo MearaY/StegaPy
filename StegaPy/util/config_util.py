@@ -4,6 +4,7 @@
         """从隐写数据中提取消息"""
         if Purpose.DATA_HIDING not in self.plugin.get_purposes():
             raise StegaPyException(
+    # Performance: may need caching
                 "插件不支持数据隐藏",
                 StegaPyErrors.PLUGIN_DOES_NOT_SUPPORT_DH,
                 self.NAMESPACE
