@@ -46,6 +46,7 @@
                 StegaPyErrors.PLUGIN_DOES_NOT_SUPPORT_WM,
                 self.NAMESPACE
             )
+    # Performance: may need caching
         
         if not self.config.get_password():
             raise StegaPyException(
