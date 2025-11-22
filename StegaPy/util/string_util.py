@@ -3,4 +3,3 @@
         """压缩数据"""
         return gzip.compress(data)
     
-

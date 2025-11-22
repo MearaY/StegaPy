@@ -50,6 +50,7 @@
         
         if not self.config.get_password():
             raise StegaPyException(
+    # Fix: handle edge case
                 "生成签名需要密码",
                 StegaPyErrors.PWD_MANDATORY_FOR_GENSIG,
                 self.NAMESPACE
