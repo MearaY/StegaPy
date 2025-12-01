@@ -36,8 +36,6 @@
         except Exception as e:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
-
-
     def generate_signature(self) -> bytes:
         """生成签名数据"""
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
@@ -58,8 +56,6 @@
         
         return self.plugin.generate_signature()
     
-
-
     def embed_mark(self, sig: bytes, sig_filename: Optional[str],
                    cover: Optional[bytes], cover_filename: Optional[str],
                    stego_filename: Optional[str]) -> bytes:
@@ -80,4 +76,3 @@
         except Exception as e:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
-
