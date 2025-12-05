@@ -1,4 +1,5 @@
 # Auto-generated utility file
+
     def embed_mark(self, sig: bytes, sig_filename: Optional[str],
                    cover: Optional[bytes], cover_filename: Optional[str],
                    stego_filename: Optional[str]) -> bytes:
