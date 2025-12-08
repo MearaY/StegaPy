@@ -1,4 +1,5 @@
 # Auto-generated utility file
+
     def extract_data(self, stego_data: bytes, 
                     stego_filename: Optional[str]) -> List:
         """从隐写数据中提取消息"""
