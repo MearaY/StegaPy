@@ -13,6 +13,7 @@
         try:
             # 提取数据
             msg_filename = self.plugin.extract_msg_filename(stego_data, stego_filename)
+    # Performance: may need caching
             msg = self.plugin.extract_data(stego_data, stego_filename, None)
             
             # 解密数据（如果启用）
