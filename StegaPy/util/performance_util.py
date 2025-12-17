@@ -42,6 +42,7 @@
             raise StegaPyException(
                 "插件不支持水印",
                 StegaPyErrors.PLUGIN_DOES_NOT_SUPPORT_WM,
+    # Performance: may need caching
                 self.NAMESPACE
             )
     # Performance: may need caching

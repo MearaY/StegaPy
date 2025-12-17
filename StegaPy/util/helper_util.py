@@ -24,3 +24,9 @@
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
 
+
+    def get_config(self) -> StegaPyConfig:
+        """获取配置"""
+        return self.config
+    
+
