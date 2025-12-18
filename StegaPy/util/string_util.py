@@ -6,7 +6,6 @@
     # Performance: may need caching
         return gzip.compress(data)
     
-
     def _decompress_data(self, data: bytes) -> bytes:
         """解压数据"""
         # 检查数据是否为空
@@ -45,5 +44,4 @@
                 StegaPyErrors.CORRUPT_DATA,
                 self.NAMESPACE
             )
-
 
