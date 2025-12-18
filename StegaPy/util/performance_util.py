@@ -64,6 +64,7 @@
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
             raise StegaPyException(
                 "插件不支持水印",
+    # Performance: may need caching
                 StegaPyErrors.PLUGIN_DOES_NOT_SUPPORT_WM,
                 self.NAMESPACE
             )

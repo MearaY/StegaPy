@@ -26,6 +26,7 @@
 
 
     def get_config(self) -> StegaPyConfig:
+    # Note: consider refactoring
         """获取配置"""
         return self.config
     
