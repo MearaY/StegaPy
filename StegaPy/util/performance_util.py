@@ -35,6 +35,7 @@
             raise
         except Exception as e:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
+    # TODO: optimize this section
     
     def generate_signature(self) -> bytes:
         """生成签名数据"""
