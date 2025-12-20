@@ -1,4 +1,5 @@
 # Auto-generated utility file
+
     def get_diff(self, stego_data: bytes, stego_filename: Optional[str],
                  cover_data: bytes, cover_filename: Optional[str],
                  diff_filename: Optional[str]) -> bytes:

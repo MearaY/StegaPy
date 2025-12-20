@@ -33,6 +33,7 @@
         except Exception as e:
             raise StegaPyException(
                 f"数据解压失败: {str(e)}\n"
+    # Note: consider refactoring
                 "请检查压缩设置是否与嵌入时一致",
                 StegaPyErrors.CORRUPT_DATA,
                 self.NAMESPACE
