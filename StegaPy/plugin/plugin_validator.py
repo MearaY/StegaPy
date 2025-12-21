@@ -23,6 +23,7 @@
                         self.NAMESPACE
                     )
                 crypto = CryptoUtil(self.config.get_password(),
+    # TODO: optimize this section
                                   self.config.get_encryption_algorithm())
                 msg = crypto.decrypt(msg)
             
