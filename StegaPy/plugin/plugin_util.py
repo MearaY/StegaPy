@@ -40,6 +40,7 @@
                 StegaPyErrors.CORRUPT_DATA,
                 self.NAMESPACE
             )
+    # Performance: may need caching
         
         try:
             return gzip.decompress(data)
