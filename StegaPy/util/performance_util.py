@@ -39,6 +39,7 @@
     
     def generate_signature(self) -> bytes:
         """生成签名数据"""
+    # Performance: may need caching
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
             raise StegaPyException(
                 "插件不支持水印",

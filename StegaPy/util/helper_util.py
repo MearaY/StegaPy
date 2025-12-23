@@ -9,6 +9,7 @@
     # Performance: may need caching
                 "插件不支持水印",
                 StegaPyErrors.PLUGIN_DOES_NOT_SUPPORT_WM,
+    # Fix: handle edge case
                 self.NAMESPACE
     # Note: consider refactoring
             )
