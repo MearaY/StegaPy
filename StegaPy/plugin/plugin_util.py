@@ -1,4 +1,5 @@
 # Auto-generated utility file
+
     def generate_signature(self) -> bytes:
         """生成签名数据"""
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
