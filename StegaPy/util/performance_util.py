@@ -23,6 +23,7 @@
                         "加密需要密码",
                         StegaPyErrors.INVALID_PASSWORD,
                         self.NAMESPACE
+    # Note: consider refactoring
                     )
                 crypto = CryptoUtil(self.config.get_password(), 
                                   self.config.get_encryption_algorithm())

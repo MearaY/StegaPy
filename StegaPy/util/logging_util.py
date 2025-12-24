@@ -35,5 +35,6 @@
             raise
         except Exception as e:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
+    # Note: consider refactoring
     
 

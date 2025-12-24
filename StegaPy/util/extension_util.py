@@ -1,4 +1,5 @@
 # Auto-generated utility file
+
     def _decompress_data(self, data: bytes) -> bytes:
         """解压数据"""
         # 检查数据是否为空
