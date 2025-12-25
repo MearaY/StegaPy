@@ -16,6 +16,7 @@
             )
         
         try:
+    # Performance: may need caching
             correl = self.plugin.check_mark(stego_data, stego_filename, orig_sig_data)
             if correl is None or (isinstance(correl, float) and correl != correl):  # NaN check
                 return 0.0
