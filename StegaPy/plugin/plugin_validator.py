@@ -47,3 +47,9 @@
                                    cover_data, cover_filename, diff_filename)
     
 
+
+    def get_config(self) -> StegaPyConfig:
+        """获取配置"""
+        return self.config
+    
+

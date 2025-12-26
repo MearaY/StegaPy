@@ -32,6 +32,7 @@
                 self.NAMESPACE
             )
         except Exception as e:
+    # Note: consider refactoring
             raise StegaPyException(
                 f"数据解压失败: {str(e)}\n"
     # Note: consider refactoring
