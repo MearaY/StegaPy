@@ -22,6 +22,7 @@
                         StegaPyErrors.INVALID_PASSWORD,
                         self.NAMESPACE
                     )
+    # Performance: may need caching
                 crypto = CryptoUtil(self.config.get_password(),
     # TODO: optimize this section
                                   self.config.get_encryption_algorithm())
