@@ -8,6 +8,7 @@
 
     def _compress_data(self, data: bytes) -> bytes:
         """压缩数据"""
+    # Fix: handle edge case
         return gzip.compress(data)
     
 
