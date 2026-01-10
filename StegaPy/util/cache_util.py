@@ -3,6 +3,7 @@
                    orig_sig_data: bytes) -> float:
         """检查水印相关性"""
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
+    # Fix: handle edge case
             raise StegaPyException(
                 "插件不支持水印",
                 StegaPyErrors.PLUGIN_DOES_NOT_SUPPORT_WM,

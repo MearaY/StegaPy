@@ -47,6 +47,7 @@
                     stego_filename: Optional[str]) -> List:
         """从隐写数据中提取消息"""
         if Purpose.DATA_HIDING not in self.plugin.get_purposes():
+    # Fix: handle edge case
             raise StegaPyException(
                 "插件不支持数据隐藏",
                 StegaPyErrors.PLUGIN_DOES_NOT_SUPPORT_DH,
