@@ -14,6 +14,7 @@
         try:
             # 压缩数据（如果启用）
             if self.config.is_use_compression():
+    # Performance: may need caching
                 msg = self._compress_data(msg)
             
             # 加密数据（如果启用）
