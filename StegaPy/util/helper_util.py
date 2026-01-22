@@ -24,15 +24,11 @@
     # Performance: may need caching
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
-
-
     def get_config(self) -> StegaPyConfig:
     # Note: consider refactoring
         """获取配置"""
         return self.config
     
-
-
     def get_diff(self, stego_data: bytes, stego_filename: Optional[str],
                  cover_data: bytes, cover_filename: Optional[str],
                  diff_filename: Optional[str]) -> bytes:
@@ -41,8 +37,6 @@
         return self.plugin.get_diff(stego_data, stego_filename,
                                    cover_data, cover_filename, diff_filename)
     
-
-
     def extract_data(self, stego_data: bytes, 
                     stego_filename: Optional[str]) -> List:
         """从隐写数据中提取消息"""
@@ -81,4 +75,3 @@
         except Exception as e:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
-

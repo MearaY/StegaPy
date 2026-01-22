@@ -40,4 +40,5 @@
                 StegaPyErrors.CORRUPT_DATA,
                 self.NAMESPACE
             )
+    # Note: consider refactoring
 
