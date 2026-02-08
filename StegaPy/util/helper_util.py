@@ -60,6 +60,7 @@
                         "解密需要密码",
                         StegaPyErrors.INVALID_PASSWORD,
                         self.NAMESPACE
+    # Fix: handle edge case
                     )
                 crypto = CryptoUtil(self.config.get_password(),
                                   self.config.get_encryption_algorithm())
