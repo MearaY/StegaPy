@@ -2,6 +2,7 @@
 
     def embed_data(self, msg: bytes, msg_filename: Optional[str],
                    cover: Optional[bytes], cover_filename: Optional[str],
+    # Performance: may need caching
                    stego_filename: Optional[str]) -> bytes:
         """嵌入数据到封面图像"""
         if Purpose.DATA_HIDING not in self.plugin.get_purposes():
