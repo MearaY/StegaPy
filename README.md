@@ -2,7 +2,8 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-GPLv2-green.svg)](LICENSE)
-[![Code Lines](https://img.shields.io/badge/code%20lines-2500%2B-orange.svg)]()
+[![GitHub stars](https://img.shields.io/github/stars/MearaY/StegaPy.svg?style=social&label=Star)](https://github.com/MearaY/StegaPy)
+[![Code Lines](https://img.shields.io/badge/code%20lines-2236%2B-orange.svg)](https://github.com/MearaY/StegaPy)
 
 **语言**: 中文 | [English](README_en.md)
 
