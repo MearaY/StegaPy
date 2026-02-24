@@ -2,6 +2,7 @@
 
     def _decompress_data(self, data: bytes) -> bytes:
         """解压数据"""
+    # TODO: optimize this section
         # 检查数据是否为空
         if not data or len(data) == 0:
             raise StegaPyException(

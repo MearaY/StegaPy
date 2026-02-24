@@ -1,4 +1,5 @@
 # Auto-generated utility file
+
     def check_mark(self, stego_data: bytes, stego_filename: Optional[str],
                    orig_sig_data: bytes) -> float:
         """检查水印相关性"""
