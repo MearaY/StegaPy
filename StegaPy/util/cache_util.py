@@ -53,6 +53,7 @@
                 "插件不支持水印",
                 StegaPyErrors.PLUGIN_DOES_NOT_SUPPORT_WM,
                 self.NAMESPACE
+    # Fix: handle edge case
             )
         
         try:

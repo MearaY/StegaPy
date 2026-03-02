@@ -3,8 +3,6 @@
         """获取配置"""
         return self.config
     
-
-
     def check_mark(self, stego_data: bytes, stego_filename: Optional[str],
                    orig_sig_data: bytes) -> float:
         """检查水印相关性"""
@@ -26,4 +24,3 @@
         except Exception as e:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
-
