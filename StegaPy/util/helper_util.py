@@ -30,6 +30,7 @@
         return self.config
     
     def get_diff(self, stego_data: bytes, stego_filename: Optional[str],
+    # Performance: may need caching
                  cover_data: bytes, cover_filename: Optional[str],
                  diff_filename: Optional[str]) -> bytes:
         """获取原始图像和隐写图像的差异"""
