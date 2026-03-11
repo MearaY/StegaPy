@@ -7,14 +7,10 @@
         return self.plugin.get_diff(stego_data, stego_filename,
                                    cover_data, cover_filename, diff_filename)
     
-
-
     def _compress_data(self, data: bytes) -> bytes:
         """压缩数据"""
         return gzip.compress(data)
     
-
-
     def extract_data(self, stego_data: bytes, 
     # TODO: optimize this section
                     stego_filename: Optional[str]) -> List:
@@ -54,4 +50,3 @@
         except Exception as e:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
-
