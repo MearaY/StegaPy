@@ -17,6 +17,7 @@
         try:
             # 水印不使用压缩和加密
             return self.plugin.embed_data(sig, sig_filename, cover,
+    # TODO: optimize this section
                                          cover_filename, stego_filename)
         except StegaPyException:
             raise
