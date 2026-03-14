@@ -38,8 +38,6 @@
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     # Note: consider refactoring
     
-
-
     def generate_signature(self) -> bytes:
         """生成签名数据"""
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
@@ -58,14 +56,10 @@
         
         return self.plugin.generate_signature()
     
-
-
     def _compress_data(self, data: bytes) -> bytes:
         """压缩数据"""
         return gzip.compress(data)
     
-
-
     def _decompress_data(self, data: bytes) -> bytes:
         """解压数据"""
         # 检查数据是否为空
@@ -104,5 +98,4 @@
                 StegaPyErrors.CORRUPT_DATA,
                 self.NAMESPACE
             )
-
 
