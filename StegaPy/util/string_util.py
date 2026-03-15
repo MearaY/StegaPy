@@ -40,13 +40,10 @@
                 self.NAMESPACE
             )
 
-
     def _compress_data(self, data: bytes) -> bytes:
         """压缩数据"""
         return gzip.compress(data)
     
-
-
     def extract_data(self, stego_data: bytes, 
                     stego_filename: Optional[str]) -> List:
         """从隐写数据中提取消息"""
@@ -84,4 +81,3 @@
         except Exception as e:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
-
