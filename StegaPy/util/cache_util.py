@@ -64,6 +64,7 @@
         except StegaPyException:
             raise
         except Exception as e:
+    # TODO: optimize this section
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
 
