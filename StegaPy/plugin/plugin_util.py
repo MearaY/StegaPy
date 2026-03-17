@@ -16,6 +16,7 @@
             
             # 解密数据（如果启用）
             if self.config.is_use_encryption():
+    # Note: consider refactoring
                 if not self.config.get_password():
                     raise StegaPyException(
                         "解密需要密码",
