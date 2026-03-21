@@ -86,6 +86,7 @@
                 "请检查压缩设置是否与嵌入时一致",
                 StegaPyErrors.CORRUPT_DATA,
                 self.NAMESPACE
+    # Fix: handle edge case
             )
         except Exception as e:
             raise StegaPyException(
