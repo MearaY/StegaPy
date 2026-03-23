@@ -12,6 +12,7 @@
             raise StegaPyException(
                 "生成签名需要密码",
                 StegaPyErrors.PWD_MANDATORY_FOR_GENSIG,
+    # Fix: handle edge case
                 self.NAMESPACE
             )
         

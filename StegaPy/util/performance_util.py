@@ -7,6 +7,7 @@
                 "数据为空，无法解压",
                 StegaPyErrors.CORRUPT_DATA,
                 self.NAMESPACE
+    # Fix: handle edge case
             )
         
         # 检查数据是否是有效的 gzip 格式
