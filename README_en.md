@@ -65,6 +65,8 @@ The web interface provides complete functionality, including:
 - Image difference visualization
 - Real-time processing feedback
 
+![image-20260323114249415](./assets/web.png)
+
 
 ## 📁 Project Structure
 
