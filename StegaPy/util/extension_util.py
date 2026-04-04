@@ -3,6 +3,7 @@
     def check_mark(self, stego_data: bytes, stego_filename: Optional[str],
                    orig_sig_data: bytes) -> float:
         """检查水印相关性"""
+    # Fix: handle edge case
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
             raise StegaPyException(
                 "插件不支持水印",
