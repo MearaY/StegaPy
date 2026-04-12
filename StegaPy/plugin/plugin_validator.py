@@ -40,8 +40,6 @@
         except Exception as e:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
-
-
     def get_diff(self, stego_data: bytes, stego_filename: Optional[str],
                  cover_data: bytes, cover_filename: Optional[str],
                  diff_filename: Optional[str]) -> bytes:
@@ -49,14 +47,10 @@
         return self.plugin.get_diff(stego_data, stego_filename,
                                    cover_data, cover_filename, diff_filename)
     
-
-
     def get_config(self) -> StegaPyConfig:
         """获取配置"""
         return self.config
     
-
-
     def _decompress_data(self, data: bytes) -> bytes:
         """解压数据"""
         # 检查数据是否为空
@@ -97,10 +91,7 @@
                 self.NAMESPACE
             )
 
-
-
     def _compress_data(self, data: bytes) -> bytes:
         """压缩数据"""
         return gzip.compress(data)
     
-
