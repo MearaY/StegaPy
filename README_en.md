@@ -1,4 +1,6 @@
-# StegaPy
+<div align="center">
+
+# StegaPy: A Python-Based Steganography Tool
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-GPLv2-green.svg)](LICENSE)
@@ -8,6 +10,8 @@
 **Language**: [中文](README.md) | English
 
 **StegaPy** is a Python-based information hiding (steganography) tool inspired by [OpenStego](https://github.com/syvaidya/openstego). It is a powerful steganography tool for hiding data and embedding digital watermarks in image files.
+
+</div>
 
 ## 📋 About
 
@@ -47,7 +51,11 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### Web Interface
+### Starting the Web Interface
+
+You can choose to run it directly or use Docker for containerization.
+
+#### Method 1: Direct Run
 
 Start the Streamlit web application:
 
@@ -58,6 +66,28 @@ streamlit run app.py
 # Or specify a custom port (recommended to use an available port, e.g., 8501)
 streamlit run app.py --server.port 8501
 ```
+
+#### Method 2: Using Docker (Cross-platform One-click Run)
+
+Ensure Docker and Docker Compose are installed on your system, then run the following in the project root:
+
+```bash
+# Build and start the container in the background
+docker-compose up -d
+
+# Check container status
+docker-compose ps
+
+# Stop and remove the container
+docker-compose down
+```
+> **Note**: The system needs to automatically build the image on the first startup, which may take a few minutes. Please be patient.
+> 
+> ![docker-build](./assets/docker-build.png)
+
+After building and starting, visit `http://localhost:8501` to start using the application.
+
+### Core Features Overview
 
 The web interface provides complete functionality, including:
 - Data hiding (embed/extract)
@@ -98,8 +128,6 @@ This project is inspired by the [OpenStego](https://github.com/syvaidya/opensteg
   - Samir Vaidya ([@syvaidya](https://github.com/syvaidya)) (samir [at] openstego.com)
   - Zelong Zhang ([@superzhangzl](https://github.com/superzhangzl))
 - **Original Project License**: GNU General Public License v2.0
-
-**Note**: This project is an independent implementation, not a direct port of the original project.
 
 ### Algorithm Acknowledgments
 

@@ -1,4 +1,6 @@
-# StegaPy
+<div align="center">
+
+# StegaPy：A Python-Based Steganography Tool
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-GPLv2-green.svg)](LICENSE)
@@ -9,9 +11,11 @@
 
 **StegaPy** 是一个基于 Python 的信息隐藏（隐写）工具，灵感来自 [OpenStego](https://github.com/syvaidya/openstego)。它是一个强大的隐写术工具，用于在图像文件中隐藏数据和嵌入数字水印。
 
+</div>
+
 ## 📋 关于项目
 
-本项目是一个基于 Python 的隐写术工具，灵感来自 OpenStego 项目。采用Python语言开发，在实现核心功能的同时引入了一些改进和扩展。请注意，这是一个进行中的项目，可能存在功能不完整或不足之处，后续会持续补充和维护。
+本项目是一个基于 Python 的隐写术工具，灵感来自 OpenStego 项目。采用 Python 语言开发，在实现核心功能的同时引入了一些改进和扩展。请注意，这是一个进行中的项目，可能存在功能不完整或不足之处，后续会持续补充和维护。
 
 - 🔄 **功能实现**: 主要隐写和水印算法
 - 🌐 **现代化 Web 界面**: 基于 Streamlit 构建的交互式 Web 应用，使用更便捷
@@ -47,7 +51,11 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### Web 界面启动
+### 启动 Web 界面
+
+您可以选择直接运行或者使用 Docker 容器化运行。
+
+#### 方式一：直接运行
 
 启动 Streamlit Web 应用：
 
@@ -58,6 +66,28 @@ streamlit run app.py
 # 或指定自定义端口（推荐使用未被占用的端口，如 8501）
 streamlit run app.py --server.port 8501
 ```
+
+#### 方式二：使用 Docker（跨平台一键运行）
+
+确保您的系统已安装 Docker 和 Docker Compose，然后在项目根目录下执行：
+
+```bash
+# 一键构建并后台启动容器
+docker-compose up -d
+
+# 查看容器运行状态
+docker-compose ps
+
+# 停止并移除容器
+docker-compose down
+```
+> **注**：首次启动时系统需要自动构建镜像，这可能会花费几分钟时间，请耐心等待。
+> 
+> ![docker-build](./assets/docker-build.png)
+
+构建完成并启动后，访问 `http://localhost:8501` 即可开始使用。
+
+### 核心功能概览
 
 Web 界面提供完整功能，包括：
 - 数据隐藏（嵌入/提取）
@@ -97,8 +127,6 @@ StegaPy/
   - Samir Vaidya ([@syvaidya](https://github.com/syvaidya)) (samir [at] openstego.com)
   - 张泽龙 ([@superzhangzl](https://github.com/superzhangzl))
 - **原始项目许可证**: GNU 通用公共许可证 v2.0
-
-**注意**: 本项目为独立实现，并非对原始项目的直接移植。
 
 ### 算法致谢
 
