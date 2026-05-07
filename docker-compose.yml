@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  stegapy:
+    build: .
+    container_name: stegapy
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    restart: unless-stopped
