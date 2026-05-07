@@ -26,14 +26,14 @@ from .plugin.dwtdugad import DWTDugadPlugin
 
 
 class PluginManager:
-    """插件管理器类"""
+    """插件管理器，负责系统内各类隐写和水印插件的注册、加载与生命周期管理。"""
     
     _plugins: Dict[str, StegaPyPlugin] = {}
     _initialized = False
     
     @classmethod
     def load_plugins(cls):
-        """加载所有插件"""
+        """初始化并加载系统内置的所有算法插件。"""
         if cls._initialized:
             return
         
@@ -46,21 +46,21 @@ class PluginManager:
     
     @classmethod
     def get_plugin_by_name(cls, name: str) -> Optional[StegaPyPlugin]:
-        """根据名称获取插件"""
+        """根据指定的插件名称获取对应的插件实例。"""
         if not cls._initialized:
             cls.load_plugins()
         return cls._plugins.get(name)
     
     @classmethod
     def get_all_plugins(cls) -> List[StegaPyPlugin]:
-        """获取所有插件"""
+        """获取当前系统已加载的所有插件列表。"""
         if not cls._initialized:
             cls.load_plugins()
         return list(cls._plugins.values())
     
     @classmethod
     def get_plugins_by_purpose(cls, purpose):
-        """根据用途获取插件"""
+        """根据指定用途（如数据隐藏、数字水印）过滤并获取支持该功能的插件列表。"""
         if not cls._initialized:
             cls.load_plugins()
         

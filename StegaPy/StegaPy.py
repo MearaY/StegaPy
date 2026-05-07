@@ -28,12 +28,12 @@ from .exceptions import StegaPyException, StegaPyErrors
 
 
 class StegaPy:
-    """StegaPy主类"""
+    """StegaPy 核心调度与管理类，提供信息隐藏与水印功能的统一对外接口。"""
     
     NAMESPACE = "StegaPy"
     
     def __init__(self, plugin: StegaPyPlugin, config: StegaPyConfig):
-        """初始化StegaPy"""
+        """初始化 StegaPy 实例，绑定核心插件与系统配置。"""
         if plugin is None:
             raise StegaPyException(
                 "未指定插件",
@@ -53,7 +53,7 @@ class StegaPy:
     def embed_data(self, msg: bytes, msg_filename: Optional[str],
                    cover: Optional[bytes], cover_filename: Optional[str],
                    stego_filename: Optional[str]) -> bytes:
-        """嵌入数据到封面图像"""
+        """将机密信息（Payload）嵌入至载体图像中，并返回隐写后的图像字节流。"""
         if Purpose.DATA_HIDING not in self.plugin.get_purposes():
             raise StegaPyException(
                 "插件不支持数据隐藏",
@@ -88,7 +88,7 @@ class StegaPy:
     
     def extract_data(self, stego_data: bytes, 
                     stego_filename: Optional[str]) -> List:
-        """从隐写数据中提取消息"""
+        """从隐写后的图像数据中提取并还原隐藏的机密信息。"""
         if Purpose.DATA_HIDING not in self.plugin.get_purposes():
             raise StegaPyException(
                 "插件不支持数据隐藏",
@@ -126,7 +126,7 @@ class StegaPy:
     def embed_mark(self, sig: bytes, sig_filename: Optional[str],
                    cover: Optional[bytes], cover_filename: Optional[str],
                    stego_filename: Optional[str]) -> bytes:
-        """嵌入水印到封面图像"""
+        """将数字水印（签名）嵌入至载体图像中。"""
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
             raise StegaPyException(
                 "插件不支持水印",
@@ -145,7 +145,7 @@ class StegaPy:
     
     def check_mark(self, stego_data: bytes, stego_filename: Optional[str],
                    orig_sig_data: bytes) -> float:
-        """检查水印相关性"""
+        """验证目标图像中是否包含指定的数字水印，并返回相关性得分。"""
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
             raise StegaPyException(
                 "插件不支持水印",
@@ -164,7 +164,7 @@ class StegaPy:
             raise StegaPyException(str(e), StegaPyErrors.UNHANDLED_EXCEPTION, self.NAMESPACE)
     
     def generate_signature(self) -> bytes:
-        """生成签名数据"""
+        """生成用于验证的数字水印签名数据。"""
         if Purpose.WATERMARKING not in self.plugin.get_purposes():
             raise StegaPyException(
                 "插件不支持水印",
@@ -184,20 +184,20 @@ class StegaPy:
     def get_diff(self, stego_data: bytes, stego_filename: Optional[str],
                  cover_data: bytes, cover_filename: Optional[str],
                  diff_filename: Optional[str]) -> bytes:
-        """获取原始图像和隐写图像的差异"""
+        """计算并获取原始载体图像与隐写后图像之间的视觉差异。"""
         return self.plugin.get_diff(stego_data, stego_filename,
                                    cover_data, cover_filename, diff_filename)
     
     def get_config(self) -> StegaPyConfig:
-        """获取配置"""
+        """获取当前实例运行的配置项。"""
         return self.config
     
     def _compress_data(self, data: bytes) -> bytes:
-        """压缩数据"""
+        """使用 gzip 算法对数据进行压缩。"""
         return gzip.compress(data)
     
     def _decompress_data(self, data: bytes) -> bytes:
-        """解压数据"""
+        """使用 gzip 算法对数据进行解压，并包含基础的数据校验。"""
         # 检查数据是否为空
         if not data or len(data) == 0:
             raise StegaPyException(
